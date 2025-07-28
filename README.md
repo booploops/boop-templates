@@ -6,14 +6,20 @@ Typically use `yarn` or `pnpm` to install dependencies.
 
 Vue based templates include auto import of `vue` and `pinia` packages.
 
+## Usage
+
+```bash
+npx gitget booploops/boop-templates/<template-name> <project-name>
+```
+
 ## Templates
 
 | Template Name  | Description                                                            |
 | -------------- | ---------------------------------------------------------------------- |
 | `yarn`         | New project with `yarn` package manager, using the node-modules linker |
-| `vue-vite`     | Vue + Vite project with auto imports                                 |
-| `vue-tailwind` | Vue + Vite project with Tailwind CSS                                |
-| `quasar-vite`  | Vue + Quasar + Vite project with auto imports                      |
+| `vue-vite`     | Vue + Vite project with auto imports                                   |
+| `vue-tailwind` | Vue + Vite project with Tailwind CSS                                   |
+| `quasar-vite`  | Vue + Quasar + Vite project with auto imports                          |
 
 ## Using another package manager instead of `yarn`
 
