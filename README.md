@@ -25,6 +25,5 @@ npx gitget booploops/boop-templates/<template-name> <project-name>
 
 Most of these templates use `yarn` as the package manager, but you can use any other package manager instead by:
 
-- Remove the `yarn.lock` file and `.yarn` directory
 - Remove the `packageManager` field from `package.json`
 - Run the install command for your package manager of choice, e.g. `npm install` or `pnpm install`
