@@ -5,13 +5,24 @@ import vueDevTools from "vite-plugin-vue-devtools";
 import AutoImport from "unplugin-auto-import/vite";
 import license from "rollup-plugin-license";
 import { join } from "node:path";
+import { quasar, transformAssetUrls } from "@quasar/vite-plugin";
 import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      template: {
+        transformAssetUrls,
+      },
+    }),
     vueDevTools(),
+    quasar({
+      autoImportComponentCase: "combined",
+      sassVariables: fileURLToPath(
+        new URL("./src/quasar-variables.sass", import.meta.url)
+      ),
+    }),
     AutoImport({
       imports: ["vue", "pinia"],
       include: [
